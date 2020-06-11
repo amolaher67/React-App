@@ -1,0 +1,2 @@
+props are value/object comming from jsx as attribute
+default value of props is true if value is not passed

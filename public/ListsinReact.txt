@@ -1,0 +1,29 @@
+Display List of values (collection) to JSX using curly braces {}
+
+const arr = [10,20,30,50,60];
+
+state might have object has values are collection - we can use that collection into JSX
+
+We can use Map method of an array - this methos used to iterate array and create new array as a result, it also call 
+callback function for each array element one by one
+
+Syntax - map(callback(currentValue,index,array),thisgs)
+ex - map((num,index)=>{return num});
+
+//Declaration of an array 
+
+const arr = [10,20,30,40];
+
+//Using array map method
+const newrArr= arr.map(num=>{
+    return <li>{num*2}</li>
+});
+-----------------
+Keys - use key attribute inside list to uniquely identify element in react
+use key attribute inside map function to html element 
+do not use index of map - 
+key did not pass as a props in component 
+
+
+
+

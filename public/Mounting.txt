@@ -1,0 +1,13 @@
+is the process of creating element and inserting into DOM tree
+below are all methods get called in orde
+
+constructor() - use to init Props states, bind this to eventHandler
+static getDerivedStateFromProps() - this nai chalnar, component cha access nasel ethe- use to get new props and states
+and we can use props values comming from parent we can update to child using thus method, we have to return 
+new updated state of child component
+render()
+shuouldComponentUpdate(nextProps,nextState) - use to decide it we have to render new changes
+componentDidMount() - its like document.ready in react - all api calls shuould be made in componentDidMount method
+always
+
+

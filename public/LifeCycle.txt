@@ -1,0 +1,20 @@
+Compoenent process
+1. Mounting
+2. Updating
+3. Error HAndling
+4. Unmounting
+
+The followring method are called in the following order when instance of Compoenent is being created and inserted
+into DOM
+
+1. constructor (Mounting) - It is called before it is mounted. When when we use constructor in component class ,
+                 first statement should before be super(props) .Otherwise this.props will be undefined,
+                 which can lead bugs
+
+
+2. static getDerivedStateFromProps() - )Mounting,Updating - new props, setState(), forceUpdate()
+3. render() -  return react element (jsx) - get called whenever state changes
+4. componentDidMount() - when mounting already done then, this method get called
+5. GetSnapShopShotBeforeUpdate() - forceUpdate
+6. componentDidUpdate() - Update - Final Event called when update done
+7. componentWillUnmount() - called just before component gets removed

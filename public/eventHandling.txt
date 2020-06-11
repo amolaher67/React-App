@@ -1,0 +1,11 @@
+these are Javascript events
+
+handling event in React element is simillar to handling event in DOM element
+
+React events are camelCase and not lowercase
+
+this will not work with event function so use arraow function or use bind in constructor to bind this to event handler function
+ you can not return false to prevent dafault behaviour in react.You must have to call preventDefault explicitly
+
+
+ 

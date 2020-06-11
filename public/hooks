@@ -1,0 +1,66 @@
+Hooks are functions that let you "hook into" React state and lifecycle feature from function components.
+state and lifecycle component use in functional component
+Hooks allow you to use react without classes
+it means you can use state and other feautes without using classes
+React provide some built in hooks like useState,useEffect,useEffect
+Hooks are a new addition in React 16.8
+
+When to use Hooks
+
+If you write a function component and realize you need to add some state in it
+
+Rules of the Hooks
+
+1. Only call hooks at top level - We should not call hooks inside loops ,conditions, or nested functions.
+   Always use hook at the top level of react function
+2. Only call hooks from React function - We should not call Hooks from regular javascript functions.call 
+   Hooks from react function component call hooks from custom hooks
+3. React realize on the order in which hooks are called
+4. Hooks dont work inside classes
+
+-----------------------------------------------------
+
+useState() - this is function that allow react to add state in function component
+             we can call inside function component to add some local state to it.
+             useState() return pair - first- current state value , second - function that let you update state value
+
+            Ex. import React,{useState} from 'react'
+                useState('Rahul');
+
+                above function will have 2 values 
+
+                var name = useState('Rahul')[0]; - return Rahul
+                var setName = useState('Rahul')[1] - return function
+
+                we can also use array Decomposition like
+
+                const [name,setName] = useState("Rahul");
+
+Note - We can call useState as may as we want
+
+Accessing State - In function we can use state variable directly
+                  <h1> your name is {name}</h1>
+
+update state - setName("RahulChangedHere");
+
+-------------------------------------------------------
+
+useEffect () - its hook for encapsulating code that has 'Side Effects'
+               if you are familliar with React class lifecycle methods, you can think of useEffect
+               Hook as componentDidMount() , componentDidUpdate(), componentWillUnmount() combined.
+
+               Ex- 
+               import React, {useState, useEffect} from 'react'
+
+                useEffect(Function)
+                useEffect(Function, Array)
+                 - Function passed to useEffect will run after the render is commited to the screen
+                 - Second argument to useEffect that is the array of values that effect depend on
+What does useEffect do ? 
+By using this hook , you tell React that your component needs to do something after render
+React will rememebr the function you passed and call it later after Dom render done.In this 
+effect we set the document title
+
+Does useEffect run after every render - Yes By default it runs both after the first render and after 
+every update
+

@@ -1,0 +1,10 @@
+State is simillar to props, but it is private and fully comtrolled by the component . We can create state only in class 
+component.It is posible to update the state/Modify state
+
+its only in class component not in function component
+props are not Modify and states are modified
+
+there are 2 ways  to initialise state in React
+1. Inside class
+2. Inside constructor
+
